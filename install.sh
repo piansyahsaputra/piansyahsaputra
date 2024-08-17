@@ -13,7 +13,7 @@ display_welcome() {
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "${BLUE}[+]                                                 [+]${NC}"
   echo -e "${BLUE}[+]                AUTO INSTALLER THEMA             [+]${NC}"
-  echo -e "${BLUE}[+]                    © SHADOW MODS              [+]${NC}"
+  echo -e "${BLUE}[+]                  © SLAYER 999                [+]${NC}"
   echo -e "${BLUE}[+]                                                 [+]${NC}"
   echo -e "${RED}[+] =============================================== [+]${NC}"
   echo -e ""
@@ -21,9 +21,9 @@ display_welcome() {
   echo -e "dilarang keras untuk memperjual belikan."
   echo -e ""
   echo -e "𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 :"
-  echo -e "@sury16GG"
+  echo -e "@Sury16GG"
   echo -e "𝗖𝗥𝗘𝗗𝗜𝗧𝗦 :"
-  echo -e "@Shadow"
+  echo -e "@Slayer 999"
   sleep 4
   clear
 }
@@ -56,16 +56,20 @@ install_jq() {
 check_token() {
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]               SURYA X FADIL X SHADOW MODS        [+]${NC}"
+  echo -e "${BLUE}[+]               LICENSY SLAYER 999            [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   echo -e "${YELLOW}MASUKAN AKSES TOKEN :${NC}"
   read -r USER_TOKEN
 
-  if [ "$USER_TOKEN" = "ShadowMods0278" ]; then
+  if [ "$USER_TOKEN" = "slayer6666" ]; then
     echo -e "${GREEN}AKSES BERHASIL${NC}}"
   else
-    echo -e "${GREEN}Buy dulu Gih Ke Fadhost${NC}"
+    echo -e "${GREEN}Buy dulu Gih Ke Slayer 999${NC}"
+    echo -e "${YELLOW}TELEGRAM : @Sury16GG${NC}"
+    echo -e "${YELLOW}WHATSAPP : 6285247588501${NC}"
+    echo -e "${YELLOW}HARGA TOKEN : 10K FREE UPDATE JIKA ADA TOKEN BARU${NC}"
+    echo -e "${YELLOW}©Slayer 999${NC}"
     exit 1
   fi
   clear
@@ -417,12 +421,25 @@ check_token
 
 while true; do
   clear
-  echo -e "                                                       "
-  echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]                   SELECT OPTION                 [+]${NC}"
-  echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "                                                       "
-  echo -e "SELECT OPTION :"
+  echo -e "                                                                     "
+  echo -e "${RED}        _,gggggggggg.                                     ${NC}"
+  echo -e "${RED}    ,ggggggggggggggggg.                                   ${NC}"
+  echo -e "${RED}  ,ggggg        gggggggg.                                 ${NC}"
+  echo -e "${RED} ,ggg'               'ggg.                                ${NC}"
+  echo -e "${RED}',gg       ,ggg.      'ggg:                               ${NC}"
+  echo -e "${RED}'ggg      ,gg'''  .    ggg       Auto Installer Slayer 999   ${NC}"
+  echo -e "${RED}gggg      gg     ,     ggg      ------------------------  ${NC}"
+  echo -e "${RED}ggg:     gg.     -   ,ggg       • Telegram : Sury16GG      ${NC}"
+  echo -e "${RED} ggg:     ggg._    _,ggg        • Creadit  : Slayer 999 ${NC}"
+  echo -e "${RED} ggg.    '.'''ggggggp           • Support by Slayer 999 ${NC}"
+  echo -e "${RED}  'ggg    '-.__                                           ${NC}"
+  echo -e "${RED}    ggg                                                   ${NC}"
+  echo -e "${RED}      ggg                                                 ${NC}"
+  echo -e "${RED}        ggg.                                              ${NC}"
+  echo -e "${RED}          ggg.                                            ${NC}"
+  echo -e "${RED}             b.                                           ${NC}"
+  echo -e "                                                                     "
+  echo -e "BERIKUT LIST INSTALL :"
   echo "1. Install theme"
   echo "2. Uninstall theme"
   echo "3. Configure Wings"
@@ -431,7 +448,7 @@ while true; do
   echo "6. Stellar Theme"
   echo "7. Hack Back Panel"
   echo "x. Exit"
-  echo -e "Masukkan pilihan (1/2/x):"
+  echo -e "Masukkan pilihan 1/2/x:"
   read -r MENU_CHOICE
   clear
 
