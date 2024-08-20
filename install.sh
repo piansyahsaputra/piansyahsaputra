@@ -79,7 +79,13 @@ check_token() {
     if [[ "$CURRENT_DATE" < "$EXPIRY_DATE" ]]; then
       echo -e "${GREEN}AKSES BERHASIL${NC}"
     else
-      echo -e "${RED}TOKEN TELAH KEDALUWARSA${NC}"
+      echo -e "${RED}KUNCI TELAH KEDALUWARSA${NC}"
+      # Menampilkan pesan informasi
+      echo -e "${GREEN}Buy dulu Gih Ke Slayer 999${NC}"
+      echo -e "${YELLOW}TELEGRAM : @Sury16GG${NC}"
+      echo -e "${YELLOW}WHATSAPP : 6285247588501${NC}"
+      echo -e "${YELLOW}HARGA TOKEN : 10K FREE UPDATE JIKA ADA TOKEN BARU${NC}"
+      echo -e "${YELLOW}©Slayer 999${NC}"
       exit 1
     fi
   else
