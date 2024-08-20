@@ -11,10 +11,10 @@ NC='\033[0m'
 display_welcome() {
   echo -e ""
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]                                                 [+]${NC}"
-  echo -e "${BLUE}[+]                AUTO INSTALLER THEMA             [+]${NC}"
-  echo -e "${BLUE}[+]                  © SLAYER 999                [+]${NC}"
-  echo -e "${BLUE}[+]                                                 [+]${NC}"
+  echo -e "${BLUE}[+]                                                       [+]${NC}"
+  echo -e "${BLUE}[+]                AUTO INSTALLER THEMA               [+]${NC}"
+  echo -e "${BLUE}[+]                  © SLAYER 999                       [+]${NC}"
+  echo -e "${BLUE}[+]                                                       [+]${NC}"
   echo -e "${RED}[+] =============================================== [+]${NC}"
   echo -e ""
   echo -e "script ini di buat untuk mempermudah penginstalasian thema pterodactyle,"
@@ -32,19 +32,19 @@ display_welcome() {
 install_jq() {
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]             UPDATE & INSTALL JQ                 [+]${NC}"
+  echo -e "${BLUE}[+]             UPDATE & INSTALL JQ                     [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   sudo apt update && sudo apt install -y jq
   if [ $? -eq 0 ]; then
     echo -e "                                                       "
     echo -e "${GREEN}[+] =============================================== [+]${NC}"
-    echo -e "${GREEN}[+]              INSTALL JQ BERHASIL                [+]${NC}"
+    echo -e "${GREEN}[+]              INSTALL JQ BERHASIL                    [+]${NC}"
     echo -e "${GREEN}[+] =============================================== [+]${NC}"
   else
     echo -e "                                                       "
     echo -e "${RED}[+] =============================================== [+]${NC}"
-    echo -e "${RED}[+]              INSTALL JQ GAGAL                   [+]${NC}"
+    echo -e "${RED}[+]              INSTALL JQ GAGAL                       [+]${NC}"
     echo -e "${RED}[+] =============================================== [+]${NC}"
     exit 1
   fi
@@ -56,13 +56,13 @@ install_jq() {
 check_token() {
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]               LICENSY SLAYER 999            [+]${NC}"
+  echo -e "${BLUE}[+]               LICENSY SLAYER 999                    [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
-  echo -e "${YELLOW}MASUKAN AKSES TOKEN :${NC}"
+  echo -e "${RED}MASUKAN AKSES TOKEN :${NC}"
   read -r USER_TOKEN
 
-  if [ "$USER_TOKEN" = "slayer6666" ]; then
+  if [ "$USER_TOKEN" = "XfNaPxWk1" ]; then
     echo -e "${GREEN}AKSES BERHASIL${NC}}"
   else
     echo -e "${GREEN}Buy dulu Gih Ke Slayer 999${NC}"
@@ -86,7 +86,7 @@ install_theme() {
     echo -e "PILIH THEME YANG INGIN DI INSTALL"
     echo "1. stellar"
     echo "2. billing"
-    echo "3. enigma"
+    echo "3. enigmaprem"
     echo "x. kembali"
     echo -e "masukan pilihan (1/2/3/x) :"
     read -r SELECT_THEME
@@ -384,7 +384,7 @@ sudo systemctl start wings
   clear
   exit 0
 }
-hackback_panel() {
+HbPanelBalik() {
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "${BLUE}[+]                    HACK BACK PANEL                 [+]${NC}"
@@ -399,7 +399,7 @@ cd /var/www/pterodactyl || { echo "Direktori tidak ditemukan"; exit 1; }
 # Membuat lokasi baru
 php artisan p:user:make <<EOF
 yes
-hackback@gmail.com
+udinjamal@gmail.com
 $user
 $user
 $user
@@ -407,7 +407,7 @@ $psswdhb
 EOF
   echo -e "                                                       "
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
-  echo -e "${GREEN}[+]                 AKUN TELAH DI ADD             [+]${NC}"
+  echo -e "${GREEN}[+]                 AKUN TELAH DI ADD                 [+]${NC}"
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   sleep 2
@@ -422,22 +422,22 @@ check_token
 while true; do
   clear
   echo -e "                                                                     "
-  echo -e "${RED}        _,gggggggggg.                                     ${NC}"
-  echo -e "${RED}    ,ggggggggggggggggg.                                   ${NC}"
-  echo -e "${RED}  ,ggggg        gggggggg.                                 ${NC}"
-  echo -e "${RED} ,ggg'               'ggg.                                ${NC}"
-  echo -e "${RED}',gg       ,ggg.      'ggg:                               ${NC}"
-  echo -e "${RED}'ggg      ,gg'''  .    ggg       Auto Installer Slayer 999   ${NC}"
-  echo -e "${RED}gggg      gg     ,     ggg      ------------------------  ${NC}"
-  echo -e "${RED}ggg:     gg.     -   ,ggg       • Telegram : Sury16GG      ${NC}"
-  echo -e "${RED} ggg:     ggg._    _,ggg        • Creadit  : Slayer 999 ${NC}"
-  echo -e "${RED} ggg.    '.'''ggggggp           • Support by Slayer 999 ${NC}"
-  echo -e "${RED}  'ggg    '-.__                                           ${NC}"
-  echo -e "${RED}    ggg                                                   ${NC}"
-  echo -e "${RED}      ggg                                                 ${NC}"
-  echo -e "${RED}        ggg.                                              ${NC}"
-  echo -e "${RED}          ggg.                                            ${NC}"
-  echo -e "${RED}             b.                                           ${NC}"
+  echo -e "${GREEN}          _______  ${NC}"
+  echo -e "${GREEN}         /       / ${NC}"
+  echo -e "${GREEN}___     /   ____/   ${NC}"
+  echo -e "${GREEN}:   :  /   /:        ${NC}"
+  echo -e "${GREEN} :   :/___/  :        ${NC}"
+  echo -e "${GREEN}  :       :   :        ${NC}"
+  echo -e "${GREEN}   :_______:   :        ${NC}"
+  echo -e "${GREEN}           /   / Owner: @Sury16GG ${NC}"
+  echo -e "${GREEN}           :  /  Premium: true ${NC}"
+  echo -e "${GREEN}           : /   Vip : true ${NC}"
+  echo -e "${GREEN}           :/    Duration : Permanent ${NC}"
+  echo -e "${GREEN}                 TimeLimit : unlimited ${NC}"
+  echo -e "${GREEN}                 WhatsApp: 6285247588501 ${NC}"
+  echo -e "${GREEN}                 Telegram: @Sury16GG ${NC}"
+  echo -e "${GREEN}                 Portable Tools DDoS By @Sury16GG ${NC}"
+  echo -e "${RED}[=================================================] ${NC}"
   echo -e "                                                                     "
   echo -e "BERIKUT LIST INSTALL :"
   echo "1. Install theme"
@@ -472,7 +472,7 @@ while true; do
       install_themeSteeler
       ;;
       7)
-      hackback_panel
+      HbPanelBalik
       ;;
     x)
       echo "Keluar dari skrip."
