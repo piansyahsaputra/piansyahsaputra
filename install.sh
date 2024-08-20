@@ -66,12 +66,12 @@ check_token() {
   echo -e "${RED}MASUKAN AKSES TOKEN :${NC}"
   read -r USER_TOKEN
 
-  # Mendapatkan tanggal saat ini
+# Mendapatkan tanggal saat ini
   CURRENT_DATE=$(date +%F)
 
-  # Debug: Tampilkan tanggal
-  echo "TNGGAL SAAT INI: $CURRENT_DATE"
-  echo "TANGGAL EXPIRED TOKEN: $EXPIRY_DATE"
+# Debugging: Tampilkan tanggal saat ini dan tanggal kedaluwarsa
+  echo -e "TANGGAL SAAT INI: $CURRENT_DATE"
+  echo -e "TANGGAL EXPIRED TOKEN: $EXPIRY_DATE"
 
   # Memeriksa apakah token valid
   if [ "$USER_TOKEN" = "$VALID_TOKEN" ]; then
