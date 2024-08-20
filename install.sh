@@ -11,11 +11,11 @@ NC='\033[0m'
 display_welcome() {
   echo -e ""
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]                                                 [+]${NC}"
-  echo -e "${BLUE}[+]                AUTO INSTALLER THEMA             [+]${NC}"
-  echo -e "${BLUE}[+]                  © SLAYER 999                   [+]${NC}"
-  echo -e "${BLUE}[+]                                                 [+]${NC}"
-  echo -e "${RED}[+] ===============================================  [+]${NC}"
+  echo -e "${BLUE}[+]                                                       [+]${NC}"
+  echo -e "${BLUE}[+]                AUTO INSTALLER THEMA               [+]${NC}"
+  echo -e "${BLUE}[+]                  © SLAYER 999                       [+]${NC}"
+  echo -e "${BLUE}[+]                                                       [+]${NC}"
+  echo -e "${RED}[+] =============================================== [+]${NC}"
   echo -e ""
   echo -e "script ini di buat untuk mempermudah penginstalasian thema pterodactyle,"
   echo -e "dilarang keras untuk memperjual belikan."
@@ -32,19 +32,19 @@ display_welcome() {
 install_jq() {
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]             UPDATE & INSTALL JQ                 [+]${NC}"
+  echo -e "${BLUE}[+]             UPDATE & INSTALL JQ                     [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   sudo apt update && sudo apt install -y jq
   if [ $? -eq 0 ]; then
     echo -e "                                                       "
     echo -e "${GREEN}[+] =============================================== [+]${NC}"
-    echo -e "${GREEN}[+]              INSTALL JQ BERHASIL                [+]${NC}"
+    echo -e "${GREEN}[+]              INSTALL JQ BERHASIL                    [+]${NC}"
     echo -e "${GREEN}[+] =============================================== [+]${NC}"
   else
     echo -e "                                                       "
     echo -e "${RED}[+] =============================================== [+]${NC}"
-    echo -e "${RED}[+]              INSTALL JQ GAGAL                   [+]${NC}"
+    echo -e "${RED}[+]              INSTALL JQ GAGAL                       [+]${NC}"
     echo -e "${RED}[+] =============================================== [+]${NC}"
     exit 1
   fi
@@ -52,18 +52,32 @@ install_jq() {
   sleep 1
   clear
 }
+# Kunci valid dan tanggal kedaluwarsa
+VALID_TOKEN="XfNaPxWk1"
+EXPIRY_DATE="2024-08-22"  # Tanggal kedaluwarsa dalam format YYYY-MM-DD
+
 #Check user token
 check_token() {
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]               LICENSY SLAYER 999                [+]${NC}"
+  echo -e "${BLUE}[+]               LICENSY SLAYER 999                    [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   echo -e "${RED}MASUKAN AKSES TOKEN :${NC}"
   read -r USER_TOKEN
 
-  if [ "$USER_TOKEN" = "XfNaPxWk1" ]; then
-    echo -e "${GREEN}AKSES BERHASIL${NC}}"
+  # Mendapatkan tanggal saat ini
+  CURRENT_DATE=$(date +%F)
+
+    # Memeriksa apakah token valid
+  if [ "$USER_TOKEN" = "$VALID_TOKEN" ]; then
+    # Memeriksa apakah token sudah kedaluwarsa
+    if [[ "$CURRENT_DATE" < "$EXPIRY_DATE" ]]; then
+      echo -e "${GREEN}AKSES BERHASIL${NC}"
+    else
+      echo -e "${RED}KUNCI TELAH KEDALUWARSA${NC}"
+      exit 1
+    fi
   else
     echo -e "${GREEN}Buy dulu Gih Ke Slayer 999${NC}"
     echo -e "${YELLOW}TELEGRAM : @Sury16GG${NC}"
@@ -74,6 +88,8 @@ check_token() {
   fi
   clear
 }
+# Panggil fungsi
+check_token
 
 # Install theme
 install_theme() {
@@ -328,7 +344,7 @@ EOF
 
   echo -e "                                                       "
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
-  echo -e "${GREEN}[+]        CREATE NODE & LOCATION SUKSES            [+]${NC}"
+  echo -e "${GREEN}[+]        CREATE NODE & LOCATION SUKSES             [+]${NC}"
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   sleep 2
@@ -338,7 +354,7 @@ EOF
 uninstall_panel() {
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]                    UNINSTALL PANEL              [+]${NC}"
+  echo -e "${BLUE}[+]                    UNINSTALL PANEL                 [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
 
@@ -353,7 +369,7 @@ EOF
 
   echo -e "                                                       "
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
-  echo -e "${GREEN}[+]                 UNINSTALL PANEL SUKSES          [+]${NC}"
+  echo -e "${GREEN}[+]                 UNINSTALL PANEL SUKSES             [+]${NC}"
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   sleep 2
@@ -363,7 +379,7 @@ EOF
 configure_wings() {
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]                    CONFIGURE WINGS              [+]${NC}"
+  echo -e "${BLUE}[+]                    CONFIGURE WINGS                 [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   #!/bin/bash
@@ -377,7 +393,7 @@ sudo systemctl start wings
 
   echo -e "                                                       "
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
-  echo -e "${GREEN}[+]                 CONFIGURE WINGS SUKSES          [+]${NC}"
+  echo -e "${GREEN}[+]                 CONFIGURE WINGS SUKSES             [+]${NC}"
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   sleep 2
@@ -387,7 +403,7 @@ sudo systemctl start wings
 HbPanelBalik() {
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]                    HACK BACK PANEL              [+]${NC}"
+  echo -e "${BLUE}[+]                    HACK BACK PANEL                 [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   # Minta input dari pengguna
@@ -407,7 +423,7 @@ $psswdhb
 EOF
   echo -e "                                                       "
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
-  echo -e "${GREEN}[+]                 AKUN TELAH DI ADD               [+]${NC}"
+  echo -e "${GREEN}[+]                 AKUN TELAH DI ADD                 [+]${NC}"
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   sleep 2
