@@ -54,7 +54,7 @@ install_jq() {
 }
 # Kunci valid dan tanggal kedaluwarsa
 VALID_TOKEN="XfNaPxWk1"
-EXPIRY_DATE="2024-08-22"  # Tanggal kedaluwarsa dalam format YYYY-MM-DD
+EXPIRY_DATE="2024-08-20"  # Tanggal kedaluwarsa dalam format YYYY-MM-DD
 
 #Check user token
 check_token() {
