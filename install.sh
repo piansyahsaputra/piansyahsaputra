@@ -52,11 +52,11 @@ install_jq() {
   sleep 1
   clear
 }
-# Kunci valid dan tanggal kedaluwarsa
+# Token dan waktu kedaluwarsa
 VALID_TOKEN="XfNaPxWk1"
-EXPIRY_DATE="2024-08-20"  # Tanggal kedaluwarsa dalam format YYYY-MM-DD
+EXPIRY_DATE="2024-08-22 15:00:00"  # Tanggal dan waktu kedaluwarsa dalam format YYYY-MM-DD HH:MM:SS
 
-#Check user token
+# Fungsi untuk memeriksa token dan waktu kedaluwarsa
 check_token() {
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
@@ -66,17 +66,28 @@ check_token() {
   echo -e "${RED}MASUKAN AKSES TOKEN :${NC}"
   read -r USER_TOKEN
 
-# Mendapatkan tanggal saat ini
-  CURRENT_DATE=$(date +%F)
+  # Mendapatkan tanggal dan waktu saat ini
+  CURRENT_DATETIME=$(date +'%Y-%m-%d %H:%M:%S')
 
-# Debugging: Tampilkan tanggal saat ini dan tanggal kedaluwarsa
-  echo -e "TANGGAL SAAT INI: $CURRENT_DATE"
-  echo -e "TANGGAL EXPIRED TOKEN: $EXPIRY_DATE"
+  # Menghitung selisih waktu
+  EXPIRY_TIMESTAMP=$(date -d "$EXPIRY_DATE" +%s)
+  CURRENT_TIMESTAMP=$(date -d "$CURRENT_DATETIME" +%s)
+  TIME_LEFT=$((EXPIRY_TIMESTAMP - CURRENT_TIMESTAMP))
+
+  # Menghitung hari, jam, menit, dan detik yang tersisa
+  DAYS_LEFT=$((TIME_LEFT / 86400))
+  HOURS_LEFT=$(( (TIME_LEFT % 86400) / 3600 ))
+  MINUTES_LEFT=$(( (TIME_LEFT % 3600) / 60 ))
+  SECONDS_LEFT=$(( TIME_LEFT % 60 ))
+
+  # Debugging: Tampilkan informasi waktu
+  echo -e "Tanggal dan waktu saat ini: $CURRENT_DATETIME"
+  echo -e "Tanggal dan waktu kedaluwarsa: $EXPIRY_DATE"
+  echo -e "Waktu tersisa: ${DAYS_LEFT} hari, ${HOURS_LEFT} jam, ${MINUTES_LEFT} menit, ${SECONDS_LEFT} detik"
 
   # Memeriksa apakah token valid
   if [ "$USER_TOKEN" = "$VALID_TOKEN" ]; then
-    # Memeriksa apakah token sudah kedaluwarsa
-    if [[ "$CURRENT_DATE" < "$EXPIRY_DATE" ]]; then
+    if [ $TIME_LEFT -gt 0 ]; then
       echo -e "${GREEN}AKSES BERHASIL${NC}"
     else
       echo -e "${RED}KUNCI TELAH KEDALUWARSA${NC}"
@@ -89,6 +100,7 @@ check_token() {
       exit 1
     fi
   else
+    echo -e "${RED}TOKEN TIDAK VALID${NC}"
     echo -e "${GREEN}Buy dulu Gih Ke Slayer 999${NC}"
     echo -e "${YELLOW}TELEGRAM : @Sury16GG${NC}"
     echo -e "${YELLOW}WHATSAPP : 6285247588501${NC}"
@@ -96,6 +108,8 @@ check_token() {
     echo -e "${YELLOW}©Slayer 999${NC}"
     exit 1
   fi
+
+  # Clear layar setelah semua output ditampilkan
   clear
 }
 # Install theme
