@@ -70,8 +70,8 @@ check_token() {
   CURRENT_DATE=$(date +%F)
 
   # Debug: Tampilkan tanggal
-  echo "Tanggal saat ini: $CURRENT_DATE"
-  echo "Tanggal kedaluwarsa: $EXPIRY_DATE"
+  echo "TNGGAL SAAT INI: $CURRENT_DATE"
+  echo "TANGGAL EXPIRED TOKEN: $EXPIRY_DATE"
 
   # Memeriksa apakah token valid
   if [ "$USER_TOKEN" = "$VALID_TOKEN" ]; then
@@ -79,7 +79,7 @@ check_token() {
     if [[ "$CURRENT_DATE" < "$EXPIRY_DATE" ]]; then
       echo -e "${GREEN}AKSES BERHASIL${NC}"
     else
-      echo -e "${RED}KUNCI TELAH KEDALUWARSA${NC}"
+      echo -e "${RED}TOKEN TELAH KEDALUWARSA${NC}"
       exit 1
     fi
   else
