@@ -69,7 +69,11 @@ check_token() {
   # Mendapatkan tanggal saat ini
   CURRENT_DATE=$(date +%F)
 
-    # Memeriksa apakah token valid
+  # Debug: Tampilkan tanggal
+  echo "Tanggal saat ini: $CURRENT_DATE"
+  echo "Tanggal kedaluwarsa: $EXPIRY_DATE"
+
+  # Memeriksa apakah token valid
   if [ "$USER_TOKEN" = "$VALID_TOKEN" ]; then
     # Memeriksa apakah token sudah kedaluwarsa
     if [[ "$CURRENT_DATE" < "$EXPIRY_DATE" ]]; then
@@ -88,9 +92,6 @@ check_token() {
   fi
   clear
 }
-# Panggil fungsi
-check_token
-
 # Install theme
 install_theme() {
   while true; do
