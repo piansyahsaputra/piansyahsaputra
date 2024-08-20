@@ -52,42 +52,33 @@ install_jq() {
   sleep 1
   clear
 }
-# Token dan waktu kedaluwarsa
+# Token yang valid
 VALID_TOKEN="XfNaPxWk1"
-EXPIRY_DATE="2024-08-22 15:00:00"  # Tanggal dan waktu kedaluwarsa dalam format YYYY-MM-DD HH:MM:SS
 
-# Fungsi untuk memeriksa token dan waktu kedaluwarsa
-check_token() {
-  echo -e "                                                       "
+# Tanggal kedaluwarsa token
+EXPIRY_DATE="2024-08-22"
+
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]               LICENSY SLAYER 999                    [+]${NC}"
+  echo -e "${BLUE}[+] ${GREEN}  ____  _            _            _      ${NC}${BLUE} [+]${NC}"
+  echo -e "${BLUE}[+] ${GREEN} / ___|| |_ __ _ ___| |_ ___  ___| |__   ${NC}${BLUE} [+]${NC}"
+  echo -e "${BLUE}[+] ${GREEN} \___ \| __/ _\` / __| __/ _ \/ __| '_ \  ${NC}${BLUE} [+]${NC}"
+  echo -e "${BLUE}[+] ${GREEN}  ___) | || (_| \__ \ ||  __/ (__| | | | ${NC}${BLUE} [+]${NC}"
+  echo -e "${BLUE}[+] ${GREEN} |____/ \__\__,_|___/\__\___|\___|_| |_|${NC}${BLUE} [+]${NC}"
+  echo -e "${BLUE}[+]                                           ${NC}${BLUE} [+]${NC}"
+  echo -e "${BLUE}[+]             ${RED}SLAYER 999${NC} ${BLUE}                     [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "                                                       "
   echo -e "${RED}MASUKAN AKSES TOKEN :${NC}"
   read -r USER_TOKEN
 
-  # Mendapatkan tanggal dan waktu saat ini
-  CURRENT_DATETIME=$(date +'%Y-%m-%d %H:%M:%S')
-
-  # Menghitung selisih waktu
-  EXPIRY_TIMESTAMP=$(date -d "$EXPIRY_DATE" +%s)
-  CURRENT_TIMESTAMP=$(date -d "$CURRENT_DATETIME" +%s)
-  TIME_LEFT=$((EXPIRY_TIMESTAMP - CURRENT_TIMESTAMP))
-
-  # Menghitung hari, jam, menit, dan detik yang tersisa
-  DAYS_LEFT=$((TIME_LEFT / 86400))
-  HOURS_LEFT=$(( (TIME_LEFT % 86400) / 3600 ))
-  MINUTES_LEFT=$(( (TIME_LEFT % 3600) / 60 ))
-  SECONDS_LEFT=$(( TIME_LEFT % 60 ))
-
-  # Debugging: Tampilkan informasi waktu
-  echo -e "Tanggal dan waktu saat ini: $CURRENT_DATETIME"
-  echo -e "Tanggal dan waktu kedaluwarsa: $EXPIRY_DATE"
-  echo -e "Waktu tersisa: ${DAYS_LEFT} hari, ${HOURS_LEFT} jam, ${MINUTES_LEFT} menit, ${SECONDS_LEFT} detik"
+  # Mendapatkan tanggal saat ini
+  CURRENT_DATE=$(date +'%Y-%m-%d')
 
   # Memeriksa apakah token valid
   if [ "$USER_TOKEN" = "$VALID_TOKEN" ]; then
-    if [ $TIME_LEFT -gt 0 ]; then
+    echo -e "Tanggal saat ini: $CURRENT_DATE"
+    echo -e "Tanggal kedaluwarsa: $EXPIRY_DATE"
+
+    if [ "$CURRENT_DATE" \< "$EXPIRY_DATE" ]; then
       echo -e "${GREEN}AKSES BERHASIL${NC}"
     else
       echo -e "${RED}KUNCI TELAH KEDALUWARSA${NC}"
@@ -112,6 +103,7 @@ check_token() {
   # Clear layar setelah semua output ditampilkan
   clear
 }
+
 # Install theme
 install_theme() {
   while true; do
