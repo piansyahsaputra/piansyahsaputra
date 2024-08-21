@@ -5,6 +5,9 @@ BLUE='\033[0;34m'
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
+CYAN='\033[0;36m'
+PURPLE='\033[0;35m'
+WHITE='\033[1;37m'
 NC='\033[0m'
 
 # Display welcome message
@@ -57,7 +60,7 @@ VALID_TOKEN="XfNaPxWk1"
 
 # Tanggal kedaluwarsa token
 EXPIRY_DATE="2024-08-22"
-
+  echo -e "                                                                                  "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "${BLUE}[+] ${GREEN}  ____  _            _            _      ${NC}${BLUE} [+]${NC}"
   echo -e "${BLUE}[+] ${GREEN} / ___|| |_ __ _ ___| |_ ___  ___| |__   ${NC}${BLUE} [+]${NC}"
@@ -67,6 +70,7 @@ EXPIRY_DATE="2024-08-22"
   echo -e "${BLUE}[+]                                           ${NC}${BLUE} [+]${NC}"
   echo -e "${BLUE}[+]             ${RED}SLAYER 999${NC} ${BLUE}                     [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
+    echo -e "                                                                                 "
   echo -e "${RED}MASUKAN AKSES TOKEN :${NC}"
   read -r USER_TOKEN
 
@@ -450,25 +454,82 @@ check_token
 
 while true; do
   clear
-  echo -e "                                                                     "
-  echo -e "${GREEN}          _______  ${NC}"
-  echo -e "${GREEN}         /       / ${NC}"
-  echo -e "${GREEN}___     /   ____/   ${NC}"
-  echo -e "${GREEN}:   :  /   /:        ${NC}"
-  echo -e "${GREEN} :   :/___/  :        ${NC}"
-  echo -e "${GREEN}  :       :   :        ${NC}"
-  echo -e "${GREEN}   :_______:   :        ${NC}"
-  echo -e "${GREEN}           /   / Owner: @Sury16GG ${NC}"
-  echo -e "${GREEN}           :  /  Premium: true ${NC}"
-  echo -e "${GREEN}           : /   Vip : true ${NC}"
-  echo -e "${GREEN}           :/    Duration : Permanent ${NC}"
-  echo -e "${GREEN}                 TimeLimit : unlimited ${NC}"
-  echo -e "${GREEN}                 WhatsApp: 6285247588501 ${NC}"
-  echo -e "${GREEN}                 Telegram: @Sury16GG ${NC}"
-  echo -e "${GREEN}                 Portable Tools DDoS By @Sury16GG ${NC}"
-  echo -e "${RED}[=================================================] ${NC}"
-  echo -e "                                                                     "
-  echo -e "BERIKUT LIST INSTALL :"
+#!/bin/bash
+
+# Definisikan warna
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+YELLOW='\033[1;33m'
+CYAN='\033[0;36m'
+PURPLE='\033[0;35m'
+WHITE='\033[1;37m'
+NC='\033[0m' # No Color
+
+# Fungsi untuk menampilkan logo tengkorak
+display_skull_logo() {
+  echo -e ""
+  echo -e "${RED}             ████████████████████${NC}"
+  echo -e "${RED}          ████${YELLOW}░░░░░░░░░░░░░░░░░░░░░░░░${RED}████${NC}"
+  echo -e "${RED}        ██${YELLOW}░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░${RED}██${NC}"
+  echo -e "${RED}      ██${YELLOW}░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░${RED}██${NC}"
+  echo -e "${RED}    ██${YELLOW}░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░${RED}██${NC}"
+  echo -e "${RED}  ██${YELLOW}░░░░█████████████████████████${RED}██${NC}"
+  echo -e "${RED}  ██${YELLOW}░░░░████${WHITE}░░░░░░░░░░░░░░░░░░${YELLOW}████${RED}██${NC}"
+  echo -e "${RED}  ██${YELLOW}░░░░██${WHITE}   ████████████████   ${YELLOW}██${RED}██${NC}"
+  echo -e "${RED}  ██${YELLOW}░░░░██${WHITE}  ██░░░░░░░░░░░░░░░░██  ${YELLOW}██${RED}██${NC}"
+  echo -e "${RED}  ██${YELLOW}░░░░██${WHITE}  ██  ${CYAN}SLAYER 999${WHITE}  ██  ${YELLOW}██${RED}██${NC}"
+  echo -e "${RED}  ██${YELLOW}░░░░████${WHITE}   ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓${YELLOW}████${RED}██${NC}"
+  echo -e "${RED}    ██${YELLOW}░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░${RED}██${NC}"
+  echo -e "${RED}      ██${YELLOW}░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░${RED}██${NC}"
+  echo -e "${RED}        ██${YELLOW}░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░${RED}██${NC}"
+  echo -e "${RED}          ████${YELLOW}░░░░░░░░░░░░░░░░░░░░░░░░░░${RED}████${NC}"
+  echo -e "${RED}             ████████████████████${NC}"
+  echo -e ""
+  echo -e "${CYAN}            Owner     : ${PURPLE}@Sury16GG ${NC}"
+  echo -e "${CYAN}            Premium   : ${GREEN}true ${NC}"
+  echo -e "${CYAN}            Vip       : ${GREEN}true ${NC}"
+  echo -e "${CYAN}            Duration  : ${PURPLE}Permanent ${NC}"
+  echo -e "${CYAN}            TimeLimit : ${PURPLE}unlimited ${NC}"
+  echo -e "${CYAN}            Powered by ${PURPLE}Slayer 999 ${NC}"
+  echo -e "${RED}[===============================================]${NC}"
+  echo -e "                                                                    "
+}
+
+# Definisikan fungsi untuk setiap pilihan menu
+install_theme() {
+  echo "Install theme functionality here"
+}
+
+uninstall_theme() {
+  echo "Uninstall theme functionality here"
+}
+
+configure_wings() {
+  echo "Configure Wings functionality here"
+}
+
+create_node() {
+  echo "Create Node functionality here"
+}
+
+uninstall_panel() {
+  echo "Uninstall Panel functionality here"
+}
+
+install_themeSteeler() {
+  echo "Install Theme Steeler functionality here"
+}
+
+HbPanelBalik() {
+  echo "Hack Back Panel functionality here"
+}
+
+# Loop utama
+while true; do
+  clear
+  display_skull_logo
+
+  echo "BERIKUT LIST INSTALL :"
   echo "1. Install theme"
   echo "2. Uninstall theme"
   echo "3. Configure Wings"
@@ -488,19 +549,19 @@ while true; do
     2)
       uninstall_theme
       ;;
-      3)
+    3)
       configure_wings
       ;;
-      4)
+    4)
       create_node
       ;;
-      5)
+    5)
       uninstall_panel
       ;;
-      6)
+    6)
       install_themeSteeler
       ;;
-      7)
+    7)
       HbPanelBalik
       ;;
     x)
