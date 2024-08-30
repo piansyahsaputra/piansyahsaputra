@@ -13,7 +13,7 @@ display_welcome() {
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "${BLUE}[+]                                                 [+]${NC}"
   echo -e "${BLUE}[+]                AUTO INSTALLER THEMA             [+]${NC}"
-  echo -e "${BLUE}[+]                    © PUTRAXZ12                  [+]${NC}"
+  echo -e "${BLUE}[+]                    © HWUWHWBOTVIPPANEL                  [+]${NC}"
   echo -e "${BLUE}[+]                                                 [+]${NC}"
   echo -e "${RED}[+] =============================================== [+]${NC}"
   echo -e ""
@@ -21,9 +21,9 @@ display_welcome() {
   echo -e "dilarang keras untuk memperjual belikan."
   echo -e ""
   echo -e "𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 :"
-  echo -e "@fadhost"
+  echo -e "@hwuwhw999"
   echo -e "𝗖𝗥𝗘𝗗𝗜𝗧𝗦 :"
-  echo -e "@FadhostOffc"
+  echo -e "@Sury16GG"
   sleep 4
   clear
 }
@@ -56,16 +56,16 @@ install_jq() {
 check_token() {
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]                LICENSY PUTRAXZ12                [+]${NC}"
+  echo -e "${BLUE}[+]                LLICENSYHWUWHWBOTVIP                [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
-  echo -e "${YELLOW}MASUKAN AKSES TOKEN :${NC}"
+  echo -e "${YELLOW}MASUKAN KATA KUNCI:${NC}"
   read -r USER_TOKEN
 
-  if [ "$USER_TOKEN" = "PUTRA12@" ]; then
+  if [ "$USER_TOKEN" = "hwuwhwvipbot" ]; then
     echo -e "${GREEN}AKSES BERHASIL${NC}}"
   else
-    echo -e "${GREEN}Buy dulu Gih Ke Putra${NC}"
+    echo -e "${GREEN}Buy dulu Gih Ke Whatsapp : 60166848304${NC}"
     exit 1
   fi
   clear
@@ -423,11 +423,11 @@ while true; do
   echo -e "${RED}  ,ggggg        gggggggg.                                 ${NC}"
   echo -e "${RED} ,ggg'               'ggg.                                ${NC}"
   echo -e "${RED}',gg       ,ggg.      'ggg:                               ${NC}"
-  echo -e "${RED}'ggg      ,gg'''  .    ggg      Auto Installer PutraXz12  ${NC}"
+  echo -e "${RED}'ggg      ,gg'''  .    ggg      Auto Installer HWUWHW VIP  ${NC}"
   echo -e "${RED}gggg      gg     ,     ggg      ------------------------  ${NC}"
-  echo -e "${RED}ggg:     gg.     -   ,ggg       • Telegram : fadhost      ${NC}"
-  echo -e "${RED} ggg:     ggg._    _,ggg        • Creadit  : FADHOSTOFFC  ${NC}"
-  echo -e "${RED} ggg.    '.'''ggggggp           • Support by FadhostOffc  ${NC}"
+  echo -e "${RED}ggg:     gg.     -   ,ggg       • Telegram : @hwuwhw999      ${NC}"
+  echo -e "${RED} ggg:     ggg._    _,ggg        • Creadit  : HWUWHW VIP ${NC}"
+  echo -e "${RED} ggg.    '.'''ggggggp           • Support by SURY16GG  ${NC}"
   echo -e "${RED}  'ggg    '-.__                                           ${NC}"
   echo -e "${RED}    ggg                                                   ${NC}"
   echo -e "${RED}      ggg                                                 ${NC}"
