@@ -59,7 +59,7 @@ install_jq() {
 VALID_TOKEN="XfNaPxWk1"
 
 # Tanggal kedaluwarsa token
-EXPIRY_DATE="2024-08-22"
+EXPIRY_DATE="2024-08-31"
   echo -e "                                                                                  "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "${BLUE}[+] ${GREEN}  ____  _            _            _      ${NC}${BLUE} [+]${NC}"
