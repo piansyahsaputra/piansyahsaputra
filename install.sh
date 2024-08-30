@@ -84,9 +84,9 @@ install_theme() {
     echo -e "${BLUE}[+] =============================================== [+]${NC}"
     echo -e "                                                       "
     echo -e "PILIH THEME YANG INGIN DI INSTALL"
-    echo "1. stellar"
-    echo "2. billing"
-    echo "3. enigma"
+    echo "1. Thema Stellar"
+    echo "2. Thema Billing"
+    echo "3. Thema Enigma Prem"
     echo "x. kembali"
     echo -e "masukan pilihan (1/2/3/x) :"
     read -r SELECT_THEME
@@ -100,7 +100,7 @@ install_theme() {
         break
         ;;
       3)
-        THEME_URL=$(echo -e "https://github.com/RafatharUserbotV4/thema/raw/main/C3.zip")
+        THEME_URL=$(echo -e "https://github.com/piansyahsaputra/whatehelbrp/raw/main/C3.zip")
         break
         ;; 
       x)
