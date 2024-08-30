@@ -56,20 +56,20 @@ install_jq() {
 check_token() {
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]               LICENSY RAFATHAR CODE            [+]${NC}"
+  echo -e "${BLUE}[+]               LICENSY HWUWHW BOTZ           [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
-  echo -e "${YELLOW}Masukan Password Login :${NC}"
+  echo -e "${YELLOW}MASUKAN AKSES TOKEN :${NC}"
   read -r USER_TOKEN
 
   if [ "$USER_TOKEN" = "hwuwhwvipbot" ]; then
-    echo -e "${GREEN}Akses Login Berhasil${NC}}"
+    echo -e "${GREEN}AKSES BERHASIL${NC}}"
   else
     echo -e "${GREEN}Buy dulu Gih Ke Hwuwhw${NC}"
     echo -e "${YELLOW}TELEGRAM : @hwuwhw999${NC}"
-    echo -e "${YELLOW}WHATSAPP : 60166848304${NC}"
+    echo -e "${YELLOW}WHATSAPP : 60166848304{NC}"
     echo -e "${YELLOW}HARGA TOKEN : 10K FREE UPDATE JIKA ADA TOKEN BARU${NC}"
-    echo -e "${YELLOW}©Sury16GG${NC}"
+    echo -e "${YELLOW}©HwuwHw Botz${NC}"
     exit 1
   fi
   clear
@@ -84,9 +84,9 @@ install_theme() {
     echo -e "${BLUE}[+] =============================================== [+]${NC}"
     echo -e "                                                       "
     echo -e "PILIH THEME YANG INGIN DI INSTALL"
-    echo "1. Thema Stellar"
-    echo "2. Thema Billing"
-    echo "3. Thema Enigma Prem"
+    echo "1. stellar"
+    echo "2. billing"
+    echo "3. enigma"
     echo "x. kembali"
     echo -e "masukan pilihan (1/2/3/x) :"
     read -r SELECT_THEME
@@ -399,7 +399,7 @@ cd /var/www/pterodactyl || { echo "Direktori tidak ditemukan"; exit 1; }
 # Membuat lokasi baru
 php artisan p:user:make <<EOF
 yes
-jamalhacker@gmail.com
+hackback@gmail.com
 $user
 $user
 $user
@@ -421,7 +421,7 @@ ubahpw_vps() {
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
 read -p "Masukkan Pw Baru: " pw
-read -p "Masukkan Pw Yang Sama: " pw
+read -p "Masukkan Ulang Pw Baru " pw
 
 passwd <<EOF
 $pw
@@ -452,27 +452,27 @@ while true; do
   echo -e "${RED}  ,ggggg        gggggggg.                                 ${NC}"
   echo -e "${RED} ,ggg'               'ggg.                                ${NC}"
   echo -e "${RED}',gg       ,ggg.      'ggg:                               ${NC}"
-  echo -e "${RED}'ggg      ,gg'''  .    ggg       Auto Installer Hwuwhw Bot Vip ${NC}"
+  echo -e "${RED}'ggg      ,gg'''  .    ggg       Auto Installer hwuwhwvipbot   ${NC}"
   echo -e "${RED}gggg      gg     ,     ggg      ------------------------  ${NC}"
   echo -e "${RED}ggg:     gg.     -   ,ggg       • Telegram : @hwuwhw999      ${NC}"
-  echo -e "${RED} ggg:     ggg._    _,ggg        • Creadit  : Hwuwhw  ${NC}"
-  echo -e "${RED} ggg.    '.'''ggggggp           • Support by Sury16GG  ${NC}"
+  echo -e "${RED} ggg:     ggg._    _,ggg        • Creadit  : hwuwhwvipbot  ${NC}"
+  echo -e "${RED} ggg.    '.'''ggggggp           • Support by hwuwhwvipbot  ${NC}"
   echo -e "${RED}  'ggg    '-.__                                           ${NC}"
   echo -e "${RED}    ggg                                                   ${NC}"
   echo -e "${RED}      ggg                                                 ${NC}"
   echo -e "${RED}        ggg.                                              ${NC}"
   echo -e "${RED}          ggg.                                            ${NC}"
   echo -e "${RED}             b.                                           ${NC}"
-  echo -e "${RED} WELCOME TO TOOLS HWUWHW ${NC}"
-  echo -e "${RED} TOOLS AUTO INSTALL THEMA ${NC}"
-  echo -e "${RED} DI LARANG SHER BEBAS ${NC}"
-  echo -e "${RED} KETAHUAN AUTO VIRAL ${NC}"
   echo -e "                                                                     "
   echo -e "BERIKUT LIST INSTALL :"
-  echo "1. Install theme Nya Bang"
-  echo "2. Uninstall theme Yang Jelek"
-  echo "3. Ambil Balik Server Bang Hwuwhw"
-  echo "4. Ubah Password Vps nya bang hwuwhw"
+  echo "1. Install theme"
+  echo "2. Uninstall theme"
+  echo "3. Configure Wings"
+  echo "4. Create Node"
+  echo "5. Uninstall Panel"
+  echo "6. Stellar Theme"
+  echo "7. Hack Back Panel"
+  echo "8. Ubah Pw Vps"
   echo "x. Exit"
   echo -e "Masukkan pilihan 1/2/x:"
   read -r MENU_CHOICE
@@ -486,9 +486,21 @@ while true; do
       uninstall_theme
       ;;
       3)
-      hackback_panel
+      configure_wings
       ;;
       4)
+      create_node
+      ;;
+      5)
+      uninstall_panel
+      ;;
+      6)
+      install_themeSteeler
+      ;;
+      7)
+      hackback_panel
+      ;;
+      8)
       ubahpw_vps
       ;;
     x)
